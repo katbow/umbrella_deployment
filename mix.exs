@@ -23,7 +23,8 @@ defmodule UmbrellaDeploy.Mixfile do
   # and cannot be accessed from applications inside the apps folder
 
   defp deps do
-    [{:distillery, "~> 1.4", runtime: false}]
+    [{:distillery, "~> 0.9"},
+    {:edeliver, "~> 1.4.0"}]
   end
 
   defp aliases do

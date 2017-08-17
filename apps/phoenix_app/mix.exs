@@ -23,7 +23,7 @@ defmodule PhoenixApp.Mixfile do
   def application do
     [mod: {PhoenixApp, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :edeliver]]
+                    :phoenix_ecto, :postgrex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -42,8 +42,6 @@ defmodule PhoenixApp.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:elixir_app, in_umbrella: true},
-     {:edeliver, "~> 1.4.0"},
-     {:distillery, ">= 0.8.0", warn_missing: false},
      {:cowboy, "~> 1.0"}]
   end
 
