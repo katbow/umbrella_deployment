@@ -13,6 +13,6 @@ defmodule ElixirApp do
 
   """
   def hello do
-    :world
+    "world"
   end
 end
