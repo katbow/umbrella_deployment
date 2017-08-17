@@ -13,11 +13,22 @@ use Mix.Config
 # which you typically run after static files are built.
 config :phoenix_app, PhoenixApp.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
+  url: [host: "...", port: {:system, "PORT"}],
+  server: true,
+  root: ".",
+  version: Mix.Project.config[:version],
   cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
 config :logger, level: :info
+
+config :phoenix_app, PhoenixApp.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "phoenix_app_dev",
+  hostname: "localhost",
+  pool_size: 10
 
 # ## SSL Support
 #
@@ -58,4 +69,4 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
