@@ -22,7 +22,7 @@ exports.config = {
     stylesheets: {
       joinTo: "css/app.css",
       order: {
-        after: ["web/static/css/app.css"] // concat app.css last
+        after: ["apps/phoenix_app/web/static/css/app.css"] // concat app.css last
       }
     },
     templates: {
@@ -41,12 +41,12 @@ exports.config = {
   paths: {
     // Dependencies and current project directories to watch
     watched: [
-      "web/static",
-      "test/static"
+      "apps/phoenix_app/web/static",
+      "apps/phoenix_app/test/static"
     ],
 
     // Where to compile files to
-    public: "priv/static"
+    public: "apps/phoenix_app/priv/static"
   },
 
   // Configure your plugins
@@ -59,7 +59,7 @@ exports.config = {
 
   modules: {
     autoRequire: {
-      "js/app.js": ["web/static/js/app"]
+      "js/app.js": ["apps/phoenix_app/web/static/js/app"]
     }
   },
 
