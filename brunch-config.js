@@ -34,7 +34,7 @@ exports.config = {
     // This option sets where we should place non-css and non-js assets in.
     // By default, we set this to "/web/static/assets". Files in this directory
     // will be copied to `paths.public`, which is "priv/static" by default.
-    assets: /^(web\/static\/assets)/
+    assets: /^(apps\/phoenix_app\/web\/static\/assets)/
   },
 
   // Phoenix paths configuration
